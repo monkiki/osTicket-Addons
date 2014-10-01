@@ -19,3 +19,8 @@ CREATE TABLE okm_assigner (
   active tinyint(1) COLLATE utf8_bin DEFAULT NULL
 );
 ````
+- Once created you can create a cron task to call the script:
+````cron
+# m h  dom mon dow   command
+*/5 * * * * /usr/bin/php /home/support/assigner.php
+````
